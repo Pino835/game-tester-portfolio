@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Orbitron, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
@@ -12,6 +12,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+});
+
+const pressStart = Press_Start_2P({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-game',
+});
+
 export const metadata = {
   title: "Juan - Game Tester",
   description: "Servicios de testeo de videojuegos",
@@ -20,19 +31,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white`}
-      >
+      <body className={`${pressStart.variable} bg-gray-900 text-white`} 
+      style={{ fontFamily: "var(--font-game)" }}>
         {/* Navbar */}
-        <nav className="bg-gray-800 p-4 flex gap-6 text-white">
-          <Link href="/">🏠Inicio</Link>
-          <Link href="/about_me">👾Sobre mí</Link>
-          <Link href="/services">🕹️Servicios</Link>
-          <Link href="/contact">🔎Contacto</Link>
+        <nav className={`${orbitron.variable} bg-gray-800 p-10 flex gap-12 text-xl`}
+  style={{ fontFamily: "var(--font-orbitron)" }}>
+          <Link className="hover:text-sky-700" href="/">🏠Inicio</Link>
+          <Link className="hover:text-sky-700" href="/about_me">👾Sobre mí</Link>
+          <Link className="hover:text-sky-700" href="/services">🕹️Servicios</Link>
+          <Link className="hover:text-sky-700" href="/contact">🔎Contacto</Link>
         </nav>
 
         {/* Contenido principal */}
-        <main className="max-w-4xl mx-auto mt-8 px-4">
+        <main className="mx-auto">
           {children}
         </main>
       </body>

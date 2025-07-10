@@ -29,48 +29,53 @@ export default function Contacto() {
 
   return (
     <main className="p-6">
-      <h1 className="text-3xl font-bold mb-4">Contacto</h1>
-      <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
-        <div>
-          <label htmlFor="nombre" className="block mb-1">Nombre:</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            required
-            className="w-full p-2 rounded bg-gray-800 text-white border border-gray-700"
-          />
-        </div>
+      <div className="ml-100">
+        <h1 className="text-3xl font-bold mb-4">Contacto</h1>
+        <br/>
+        <p>Si está intersado(a), contáctame llenando este formulario.</p>
+        <br/>
+        <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
+          <div>
+            <label htmlFor="nombre" className="block mb-1">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              className="w-full p-2 rounded bg-gray-800 text-white border border-gray-700"
+            />
+          </div>
 
-        <div>
-          <label htmlFor="email" className="block mb-1">Correo:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            className="w-full p-2 rounded bg-gray-800 text-white border border-gray-700"
-          />
-        </div>
+          <div>
+            <label htmlFor="email" className="block mb-1">Correo:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              className="w-full p-2 rounded bg-gray-800 text-white border border-gray-700"
+            />
+          </div>
 
-        <div>
-          <label htmlFor="mensaje" className="block mb-1">Mensaje:</label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows="5"
-            required
-            className="w-full p-2 rounded bg-gray-800 text-white border border-gray-700"
-          />
-        </div>
+          <div>
+            <label htmlFor="mensaje" className="block mb-1">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              required
+              className="w-full p-2 rounded bg-gray-800 text-white border border-gray-700"
+            />
+          </div>
 
-        <button
-          type="submit"
-          className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white font-semibold"
-        >
-          {estado}
-        </button>
-      </form>
+          <button
+            type="submit"
+            className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white font-semibold"
+          >
+            {estado}
+          </button>
+        </form>
+      </div>
     </main>
   );
 }
