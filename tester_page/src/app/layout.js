@@ -25,10 +25,10 @@ export default function RootLayout({ children }) {
       >
         {/* Navbar */}
         <nav className="bg-gray-800 p-4 flex gap-6 text-white">
-          <Link href="/">Inicio</Link>
-          <Link href="/about_me">Sobre mí</Link>
-          <Link href="/services">Servicios</Link>
-          <Link href="/contact">Contacto</Link>
+          <Link href="/">🏠Inicio</Link>
+          <Link href="/about_me">👾Sobre mí</Link>
+          <Link href="/services">🕹️Servicios</Link>
+          <Link href="/contact">🔎Contacto</Link>
         </nav>
 
         {/* Contenido principal */}
