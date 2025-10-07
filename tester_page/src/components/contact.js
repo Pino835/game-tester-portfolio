@@ -32,7 +32,7 @@ export default function Contacto() {
       <div className="ml-100">
         <h1 className="text-3xl font-bold mb-4">Contacto</h1>
         <br/>
-        <p>Si está intersado(a), contáctame llenando este formulario.</p>
+        <p>Si está interesado(a), contáctame llenando este formulario.</p>
         <br/>
         <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
           <div>
